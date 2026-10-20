@@ -21,5 +21,6 @@ endif()
 
 set(SOURCES
     src/branch.cpp
+    src/false_sharing.cpp
 )
 add_executable(PerformanceAnalysisExe ${SOURCES})

@@ -4,7 +4,7 @@
 #include <random>
 #include <algorithm>
 
-int main() {
+int branch() {
 
     std::mt19937 rng(std::random_device{}());
     std::uniform_int_distribution<int> dist(0, 10'000 - 1);
@@ -33,4 +33,5 @@ int main() {
     std::chrono::duration<double> no_branch_diff = no_branch_end - no_branch_start;
     std::cout << no_branch_diff.count() << " seconds\n";
 
+    return 0;
 }
