@@ -1,0 +1,7 @@
+{
+    "cmake.sourceDirectory": "E:/LAT/GitHub/CPP/PerformanceAnalysis",
+    "C_Cpp.default.cppStandard": "c++20",
+    "cmake.configureSettings": {
+        "CMAKE_CXX_STANDARD": "20"
+    }
+}

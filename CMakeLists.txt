@@ -5,7 +5,7 @@ project(PerformanceAnalysis
     LANGUAGES CXX
 )
 
-set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
@@ -13,7 +13,7 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 if(MSVC)
-    add_compile_options(/W4)
+    add_compile_options(/W4 /Zc:__cplusplus)
     # add_compile_options(/showIncludes)
 else()
     add_compile_options(-Wall -Wextra -Wpedantic)
@@ -22,5 +22,13 @@ endif()
 set(SOURCES
     src/branch.cpp
     src/false_sharing.cpp
+    src/pointer_aliasing.cpp
 )
 add_executable(PerformanceAnalysisExe ${SOURCES})
+
+target_compile_features(PerformanceAnalysisExe PRIVATE cxx_std_20)
+
+# message(STATUS "CMAKE_CXX_STANDARD = ${CMAKE_CXX_STANDARD}")
+# message(STATUS "CMAKE_CXX_FLAGS = ${CMAKE_CXX_FLAGS}")
+# message(STATUS "CMAKE_CXX_FLAGS_RELEASE = ${CMAKE_CXX_FLAGS_RELEASE}")
+# message(STATUS "CMAKE_CXX_FLAGS_DEBUG = ${CMAKE_CXX_FLAGS_DEBUG}")
