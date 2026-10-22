@@ -4,7 +4,7 @@
 #include <random>
 #include <algorithm>
 
-int branch() {
+int main_() {
 
     std::mt19937 rng(std::random_device{}());
     std::uniform_int_distribution<int> dist(0, 10'000 - 1);

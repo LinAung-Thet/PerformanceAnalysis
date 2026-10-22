@@ -12,7 +12,7 @@ struct S_padded{
     int b;
 };
 
-int false_sharing() {
+int main_() {
     S s;
     S_padded s_padded;
 

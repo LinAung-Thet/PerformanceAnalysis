@@ -47,7 +47,7 @@ void muladd_span(std::span<float> a,
     }
 }
 
-int main() {
+int main_() {
     const int n = 100'000'000;
     float* a = new float[n];
     float* b = new float[n];
