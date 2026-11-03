@@ -30,3 +30,16 @@
 *.exe
 *.out
 *.app
+
+/build
+**/CMakeFiles/
+**/Temporary/
+
+*.filters
+*.vcxproj
+*.sln
+*.cmake
+*.exe
+
+CMakeCache.txt
+*.dmp
