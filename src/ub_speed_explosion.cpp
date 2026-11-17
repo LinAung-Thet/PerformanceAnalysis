@@ -1,7 +1,7 @@
-#include<iostream>
-#include<array>
-#include<span>
-#include<vector>
+#include <iostream>
+#include <array>
+#include <span>
+#include <vector>
 
 std::string func(int x) {
     int dummy = 0;
@@ -22,10 +22,10 @@ void printArray(int* arr, int n) {
     }
     std::cout << std::endl;
 }
-// void printSize(std::span<int> arr)
-// {
-//     std::cout << "Array size: " << arr.size() << std::endl;
-// }
+void printSize(std::span<int> arr)
+{
+    std::cout << "Array size: " << arr.size() << std::endl;
+}
 
 template <std::size_t N>
 void printSize(std::array<int, N>& arr)
@@ -55,9 +55,9 @@ int main() {
     std::array<int, 5> arr2{};
     printSize(arr2);  
 
-    // // Using span.
-    // std::vector<int> arr3(5);
-    // printSize(arr3);
+    // Using span.
+    std::vector<int> arr3(5);
+    printSize(arr3);
 
     return 0;
 }
