@@ -37,7 +37,7 @@ void printSize(std::array<int, N>& arr)
     std::cout << "Array size: " << arr.size() << std::endl;
 }
 
-int main() {
+int main_() {
     std::cout << "The result of func(INT_MAX) is: " + func(INT_MAX) << std::endl;
 
     std::cout << "The condition (x + 1 <= x) is optimized away by the compiler because it is assumed to be impossible." << std::endl;
